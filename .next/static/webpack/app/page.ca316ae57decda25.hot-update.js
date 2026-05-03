@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/page",{
+
+/***/ "(app-pages-browser)/./src/components/AuthPage.module.css":
+/*!********************************************!*\
+  !*** ./src/components/AuthPage.module.css ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval(__webpack_require__.ts("// extracted by mini-css-extract-plugin\nmodule.exports = {\"page\":\"AuthPage_page__RQwxq\",\"blobLeft\":\"AuthPage_blobLeft__lFA1Y\",\"blobRight\":\"AuthPage_blobRight__yk9_Z\",\"wrapper\":\"AuthPage_wrapper__LdAHI\",\"header\":\"AuthPage_header__Ipx_j\",\"logo\":\"AuthPage_logo__2y5gV\",\"logoMark\":\"AuthPage_logoMark__lJaZt\",\"logoText\":\"AuthPage_logoText__pavEj\",\"card\":\"AuthPage_card__qzt8t\",\"title\":\"AuthPage_title__gKGlk\",\"form\":\"AuthPage_form__YlIgK\",\"inputWrap\":\"AuthPage_inputWrap__r6aSA\",\"input\":\"AuthPage_input__Riwvf\",\"button\":\"AuthPage_button__f6jGY\",\"error\":\"AuthPage_error__dZ_hY\",\"switchText\":\"AuthPage_switchText__6gZwU\",\"switchButton\":\"AuthPage_switchButton__DhUeu\"};\n    if(true) {\n      // 1777804018932\n      var cssReload = __webpack_require__(/*! ./node_modules/next/dist/compiled/mini-css-extract-plugin/hmr/hotModuleReplacement.js */ \"(app-pages-browser)/./node_modules/next/dist/compiled/mini-css-extract-plugin/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"/_next/\",\"esModule\":false,\"locals\":true});\n      module.hot.dispose(cssReload);\n      \n    }\n  \nmodule.exports.__checksum = \"acf40df3a6eb\"\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL3NyYy9jb21wb25lbnRzL0F1dGhQYWdlLm1vZHVsZS5jc3MiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSxrQkFBa0I7QUFDbEIsT0FBTyxJQUFVO0FBQ2pCO0FBQ0Esc0JBQXNCLG1CQUFPLENBQUMsd01BQXlJLGNBQWMsc0RBQXNEO0FBQzNPLE1BQU0sVUFBVTtBQUNoQjtBQUNBO0FBQ0E7QUFDQSx5QkFBeUIiLCJzb3VyY2VzIjpbIkM6XFxDb29seWVhaFxcU01TIDRcXFNCRFByYWtcXFRFUEVTMTBcXHRvZG8tYXBwXFxmcm9udGVuZFxcc3JjXFxjb21wb25lbnRzXFxBdXRoUGFnZS5tb2R1bGUuY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxubW9kdWxlLmV4cG9ydHMgPSB7XCJwYWdlXCI6XCJBdXRoUGFnZV9wYWdlX19SUXd4cVwiLFwiYmxvYkxlZnRcIjpcIkF1dGhQYWdlX2Jsb2JMZWZ0X19sRkExWVwiLFwiYmxvYlJpZ2h0XCI6XCJBdXRoUGFnZV9ibG9iUmlnaHRfX3lrOV9aXCIsXCJ3cmFwcGVyXCI6XCJBdXRoUGFnZV93cmFwcGVyX19MZEFISVwiLFwiaGVhZGVyXCI6XCJBdXRoUGFnZV9oZWFkZXJfX0lweF9qXCIsXCJsb2dvXCI6XCJBdXRoUGFnZV9sb2dvX18yeTVnVlwiLFwibG9nb01hcmtcIjpcIkF1dGhQYWdlX2xvZ29NYXJrX19sSmFadFwiLFwibG9nb1RleHRcIjpcIkF1dGhQYWdlX2xvZ29UZXh0X19wYXZFalwiLFwiY2FyZFwiOlwiQXV0aFBhZ2VfY2FyZF9fcXp0OHRcIixcInRpdGxlXCI6XCJBdXRoUGFnZV90aXRsZV9fZ0tHbGtcIixcImZvcm1cIjpcIkF1dGhQYWdlX2Zvcm1fX1lsSWdLXCIsXCJpbnB1dFdyYXBcIjpcIkF1dGhQYWdlX2lucHV0V3JhcF9fcjZhU0FcIixcImlucHV0XCI6XCJBdXRoUGFnZV9pbnB1dF9fUml3dmZcIixcImJ1dHRvblwiOlwiQXV0aFBhZ2VfYnV0dG9uX19mNmpHWVwiLFwiZXJyb3JcIjpcIkF1dGhQYWdlX2Vycm9yX19kWl9oWVwiLFwic3dpdGNoVGV4dFwiOlwiQXV0aFBhZ2Vfc3dpdGNoVGV4dF9fNmdad1VcIixcInN3aXRjaEJ1dHRvblwiOlwiQXV0aFBhZ2Vfc3dpdGNoQnV0dG9uX19EaFVldVwifTtcbiAgICBpZihtb2R1bGUuaG90KSB7XG4gICAgICAvLyAxNzc3ODA0MDE4OTMyXG4gICAgICB2YXIgY3NzUmVsb2FkID0gcmVxdWlyZShcIkM6L0Nvb2x5ZWFoL1NNUyA0L1NCRFByYWsvVEVQRVMxMC90b2RvLWFwcC9mcm9udGVuZC9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2NvbXBpbGVkL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2htci9ob3RNb2R1bGVSZXBsYWNlbWVudC5qc1wiKShtb2R1bGUuaWQsIHtcInB1YmxpY1BhdGhcIjpcIi9fbmV4dC9cIixcImVzTW9kdWxlXCI6ZmFsc2UsXCJsb2NhbHNcIjp0cnVlfSk7XG4gICAgICBtb2R1bGUuaG90LmRpc3Bvc2UoY3NzUmVsb2FkKTtcbiAgICAgIFxuICAgIH1cbiAgXG5tb2R1bGUuZXhwb3J0cy5fX2NoZWNrc3VtID0gXCJhY2Y0MGRmM2E2ZWJcIlxuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(app-pages-browser)/./src/components/AuthPage.module.css\n"));
+
+/***/ })
+
+});

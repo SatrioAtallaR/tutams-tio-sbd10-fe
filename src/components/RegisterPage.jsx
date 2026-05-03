@@ -6,7 +6,7 @@ import styles from "./AuthPage.module.css";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function RegisterPage({ onRegisterSuccess, onSwitchToLogin }) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -32,7 +32,7 @@ export default function RegisterPage({ onRegisterSuccess, onSwitchToLogin }) {
       const res = await fetch(`${API_URL}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await res.json();
@@ -54,52 +54,71 @@ export default function RegisterPage({ onRegisterSuccess, onSwitchToLogin }) {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
-        <h1 className={styles.title}>Register</h1>
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={styles.input}
-            disabled={loading}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className={styles.input}
-            disabled={loading}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            className={styles.input}
-            disabled={loading}
-            required
-          />
-          {error && <p className={styles.error}>{error}</p>}
-          <button type="submit" className={styles.button} disabled={loading}>
-            {loading ? "Loading..." : "Register"}
-          </button>
-        </form>
-        <p className={styles.switchText}>
-          Already have an account?{" "}
-          <button
-            type="button"
-            onClick={onSwitchToLogin}
-            className={styles.switchButton}
-          >
-            Login here
-          </button>
-        </p>
+    <div className={styles.page}>
+      <div className={styles.blobLeft} />
+      <div className={styles.blobRight} />
+      <div className={styles.wrapper}>
+        <header className={styles.header}>
+          <div className={styles.logo}>
+            <span className={styles.logoMark}>✦</span>
+            <span className={styles.logoText}>KerjainWoi!</span>
+          </div>
+        </header>
+        <div className={styles.card}>
+          <h1 className={styles.title}>
+            Buat Akun Baru Kamu!
+            <em>Kerjain tugas lu woi</em>
+          </h1>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.inputWrap}>
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className={styles.input}
+                disabled={loading}
+                required
+              />
+            </div>
+            <div className={styles.inputWrap}>
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={styles.input}
+                disabled={loading}
+                required
+              />
+            </div>
+            <div className={styles.inputWrap}>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className={styles.input}
+                disabled={loading}
+                required
+              />
+            </div>
+            {error && <p className={styles.error}>{error}</p>}
+            <button type="submit" className={styles.button} disabled={loading}>
+              {loading ? "Loading..." : "Register"}
+            </button>
+          </form>
+          <p className={styles.switchText}>
+            Sudah punya akun?
+            <button
+              type="button"
+              onClick={onSwitchToLogin}
+              className={styles.switchButton}
+            >
+              Login
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   );

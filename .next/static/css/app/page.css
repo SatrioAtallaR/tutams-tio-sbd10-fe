@@ -560,71 +560,162 @@
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/AuthPage.module.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/
-.AuthPage_container__GEGwQ {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.AuthPage_page__RQwxq {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.AuthPage_blobLeft__lFA1Y {
+  position: fixed;
+  top: -120px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 106, 247, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.AuthPage_blobRight__yk9_Z {
+  position: fixed;
+  bottom: -80px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 90, 106, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.AuthPage_wrapper__LdAHI {
+  width: 100%;
+  max-width: 560px;
+  position: relative;
+  z-index: 1;
+}
+
+.AuthPage_header__Ipx_j {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 28px;
+  padding: 0 4px;
+}
+
+.AuthPage_logo__2y5gV {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.AuthPage_logoMark__lJaZt {
+  font-size: 20px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.AuthPage_logoText__pavEj {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
 }
 
 .AuthPage_card__qzt8t {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 400px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
 }
 
 .AuthPage_title__gKGlk {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1.5rem;
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.AuthPage_title__gKGlk em {
+  font-style: normal;
+  font-weight: 400;
+  background: linear-gradient(135deg, var(--accent) 0%, #b388ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .AuthPage_form__YlIgK {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 12px;
+}
+
+.AuthPage_inputWrap__r6aSA {
+  width: 100%;
 }
 
 .AuthPage_input__Riwvf {
-  padding: 0.75rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
+  width: 100%;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 13px 16px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.AuthPage_input__Riwvf::placeholder {
+  color: var(--text-muted);
 }
 
 .AuthPage_input__Riwvf:focus {
-  outline: none;
-  border-color: #667eea;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-dim);
 }
 
 .AuthPage_input__Riwvf:disabled {
-  background-color: #f5f5f5;
+  opacity: 0.7;
   cursor: not-allowed;
 }
 
 .AuthPage_button__f6jGY {
-  padding: 0.75rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid transparent;
+  background: var(--accent);
   color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: var(--radius-md);
+  padding: 13px 18px;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s;
+  margin-top: 4px;
 }
 
 .AuthPage_button__f6jGY:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  background: var(--accent-hover);
+  transform: translateY(-1px);
 }
 
 .AuthPage_button__f6jGY:disabled {
@@ -633,30 +724,50 @@
 }
 
 .AuthPage_error__dZ_hY {
-  color: #e74c3c;
-  font-size: 0.875rem;
-  margin: 0;
+  color: #ff8a96;
+  background: var(--danger-dim);
+  border: 1px solid rgba(247, 90, 106, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
 }
 
 .AuthPage_switchText__6gZwU {
   text-align: center;
-  margin-top: 1.5rem;
-  color: #666;
-  font-size: 0.95rem;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .AuthPage_switchButton__DhUeu {
-  background: none;
+  background: transparent;
   border: none;
-  color: #667eea;
+  color: var(--accent-hover);
   cursor: pointer;
-  font-weight: 600;
-  text-decoration: underline;
+  font-weight: 700;
+  font-size: 14px;
   padding: 0;
-  font-size: 0.95rem;
 }
 
 .AuthPage_switchButton__DhUeu:hover {
-  color: #764ba2;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .AuthPage_card__qzt8t {
+    padding: 24px;
+  }
+
+  .AuthPage_logoText__pavEj {
+    font-size: 28px;
+  }
+
+  .AuthPage_title__gKGlk {
+    margin-bottom: 20px;
+  }
 }
 
