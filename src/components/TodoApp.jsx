@@ -37,7 +37,7 @@ function SaveIcon() {
   );
 }
 
-export default function TodoApp() {
+export default function TodoApp({ onLogout }) {
   const [todos, setTodos] = useState([]);
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(true);
@@ -48,6 +48,14 @@ export default function TodoApp() {
   const [submitting, setSubmitting] = useState(false);
   const editInputRef = useRef(null);
   const addInputRef = useRef(null);
+
+  const getHeaders = () => {
+    const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    return {
+      "Content-Type": "application/json",
+      ...(token && { "Authorization": `Bearer ${token}` }),
+    };
+  };
 
   useEffect(() => {
     fetchTodos();
@@ -63,7 +71,9 @@ export default function TodoApp() {
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch(`${API_URL}/todos`);
+      const res = await fetch(`${API_URL}/todos`, {
+        headers: getHeaders(),
+      });
       if (!res.ok) throw new Error("Failed to fetch todos");
       const data = await res.json();
       setTodos(data);
@@ -82,7 +92,7 @@ export default function TodoApp() {
     try {
       const res = await fetch(`${API_URL}/todos`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: getHeaders(),
         body: JSON.stringify({ title: title.trim() }),
       });
       if (!res.ok) throw new Error("Failed to add todo");
@@ -104,7 +114,7 @@ export default function TodoApp() {
     try {
       const res = await fetch(`${API_URL}/todos/${todo.id}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
+        headers: getHeaders(),
         body: JSON.stringify({ completed: !todo.completed }),
       });
       if (!res.ok) throw new Error();
@@ -128,7 +138,7 @@ export default function TodoApp() {
     try {
       const res = await fetch(`${API_URL}/todos/${id}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
+        headers: getHeaders(),
         body: JSON.stringify({ title: editTitle.trim() }),
       });
       if (!res.ok) throw new Error();
@@ -149,12 +159,21 @@ export default function TodoApp() {
     const prev = todos;
     setTodos(todos.filter(t => t.id !== id));
     try {
-      const res = await fetch(`${API_URL}/todos/${id}`, { method: "DELETE" });
+      const res = await fetch(`${API_URL}/todos/${id}`, {
+        method: "DELETE",
+        headers: getHeaders(),
+      });
       if (!res.ok) throw new Error();
     } catch {
       setTodos(prev);
       setError("Gagal menghapus todo.");
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    onLogout();
   };
 
   const filteredTodos = todos.filter(t => {
@@ -186,6 +205,9 @@ export default function TodoApp() {
               <span className={styles.statDot} style={{ background: "var(--success)" }} />
               {doneCount} selesai
             </span>
+            <button onClick={handleLogout} className={styles.logoutBtn}>
+              Logout
+            </button>
           </div>
         </header>
 

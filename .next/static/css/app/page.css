@@ -75,6 +75,7 @@
 .TodoApp_stats__AU_6K {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .TodoApp_statPill__Gsd4d {
@@ -95,6 +96,24 @@
   height: 6px;
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.TodoApp_logoutBtn__9kUif {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.TodoApp_logoutBtn__9kUif:hover {
+  background: var(--surface);
+  color: #e74c3c;
+  border-color: #e74c3c;
 }
 
 /* Card */
@@ -536,5 +555,108 @@
     align-items: flex-start;
     gap: 10px;
   }
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/AuthPage.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.AuthPage_container__GEGwQ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.AuthPage_card__qzt8t {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.AuthPage_title__gKGlk {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.AuthPage_form__YlIgK {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.AuthPage_input__Riwvf {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.AuthPage_input__Riwvf:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.AuthPage_input__Riwvf:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.AuthPage_button__f6jGY {
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.AuthPage_button__f6jGY:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.AuthPage_button__f6jGY:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.AuthPage_error__dZ_hY {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.AuthPage_switchText__6gZwU {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.AuthPage_switchButton__DhUeu {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.AuthPage_switchButton__DhUeu:hover {
+  color: #764ba2;
 }
 

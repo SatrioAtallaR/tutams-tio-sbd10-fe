@@ -72,6 +72,7 @@
 .stats {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .statPill {
@@ -92,6 +93,24 @@
   height: 6px;
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.logoutBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.logoutBtn:hover {
+  background: var(--surface);
+  color: #e74c3c;
+  border-color: #e74c3c;
 }
 
 /* Card */
